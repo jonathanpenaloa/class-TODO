@@ -1,3 +1,57 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
 h1 {
     color: #a90707;
+}
+
+.main-continer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+.todo {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-content: right;
+    font-size: 30px;
+    padding: 0;
+    margin: 20px;
+}
+
+input {
+    font-size: 30px;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 5vmin;
+    border: 1px solid black;
+    margin: 20px;
+}
+
+li > button {
+    color: white;
+    background-color: #a90707;
+    border: none;
+    font-size: 20px;
+    height: 20px;
+    width: 20px;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: #b46d6d;
 }
