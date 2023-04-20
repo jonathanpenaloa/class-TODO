@@ -7,12 +7,34 @@ h1 {
     color: #a90707;
 }
 
-.main-continer {
+form {
     display: flex;
     justify-content: space-around;
     align-items: center;
     text-align: center;
 }
+
+form > button {
+    color: aliceblue;
+    background-color: #a90707;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    height: 50px;
+    width: 50px;
+}
+
+
+textarea {
+    font-size: 20px;
+    height: 460;
+    height: 165;
+}
+/* .main-continer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+} */
 
 .todo {
     display: flex;

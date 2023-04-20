@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="main.js" defer></script>
     <link rel="stylesheet" href="./styles.css">
-    <title>TODO APP</title>
+    <title>Todo List</title>
 </head>
 <body>
 
@@ -14,18 +14,19 @@
         
         <div id="input-section">
             <h1>Add something todo</h1>
-            <input type="text" name="todo-item" id="todo-item">
+            <form action="submit">
+                <input placeholder="Add todo" type="text" name="todo-item" id="todo-item">
+                <textarea placeholder="Description.." name="description" id="description" cols="30" rows="10"></textarea>
+                <button type="submit">Add</button>
+            </form>
         </div>
         
         <div class="todos">
             <h1>Get it done</h1>
             <ul>
-                <li><input type="checkbox"></input>
-                    <label for="">take dog to park</label>
-                    <button>x</button>
-                </li>
-                <li><input type="checkbox"></input>
-                    <label for="">take dog to park</label>
+                <li>
+                    <input type="checkbox"></input>
+                    <label for="todo">take dog to park</label>
                     <button>x</button>
                 </li>
             </ul>
