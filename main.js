@@ -1,12 +1,12 @@
-let formIElement = document.querySelector('form');
+let formElement = document.querySelector('form');
 let ul = document.querySelector('ul');
 
 
 
-formIElement.addEventListener('submit', (event) => {
+formElement.addEventListener('submit', (event) => {
     event.preventDefault();
-    let todoItemFromForm = formIElement.elements['todo-item'];
-    let todoDescriptionFromForm = formIElement.elements['description'];
+    let todoItemFromForm = formElement.elements['todo-item'];
+    let todoDescriptionFromForm = formElement.elements['description'];
 
     createDOMElement(todoItemFromForm.value, todoDescriptionFromForm.vlaue);
     console.log(todoItemFromForm.value);
@@ -52,6 +52,7 @@ class TodoItem {
 
     }
 }
+
 
 
 class TodoList {
