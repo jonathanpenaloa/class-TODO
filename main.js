@@ -8,9 +8,7 @@ formElement.addEventListener('submit', (event) => {
     let todoItemFromForm = formElement.elements['todo-item'];
     let todoDescriptionFromForm = formElement.elements['description'];
 
-    createDOMElement(todoItemFromForm.value, todoDescriptionFromForm.vlaue);
-    console.log(todoItemFromForm.value);
-    console.log(todoDescriptionFromForm.value);
+    todos.createDOMElement(todoItemFromForm.value);
     
     todoItemFromForm.value = "";
     todoDescriptionFromForm.value = "";
@@ -37,27 +35,34 @@ class TodoItem {
 
        let button = document.createElement("button");
        button.setAttribute("id", "delete");
-       button.textContent = "X"
+       button.textContent = "X";
+
+       button.addEventListener("click", () => {
+        ul.removeChild(addedLi);
+       });
 
        addedLi.appendChild(input);
        addedLi.appendChild(label);
        addedLi.appendChild(button);
 
        ul.appendChild(addedLi);
-
-
-
+       return ul;
     }
-    updateDOMElement() {
-
+    
+    updateDOMElement(ul) {
+        console.log(ul);
     }
 }
 
 
+let todos = new TodoItem();
+todos.updateDOMElement(todos.id)
+
 
 class TodoList {
     constructor(todoItem, todoDescription) {
-
+    this.todoItem = todoItem
+    this.todoDescription = todoDescription
     }
     add(text) {
 
